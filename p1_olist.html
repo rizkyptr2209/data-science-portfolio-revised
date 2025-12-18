@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizky's Portfolio</title>
+  <link rel="stylesheet" href="p1_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+
+      <div class="nav-left">
+        <div class="l-trapezoid"></div>
+        <img src="static/Portfolio Logo.png" alt="Logo" class="logo">
+        <span></span>
+      </div>
+      
+      <div class="nav-middle">
+        <div class="nav-buttons">
+          <ul>
+            <li class="list active" data-label="Overview">
+              <a href="#overview">
+                <span class="icon"><i class="fa-solid fa-file-lines"></i></span>
+              </a>
+            </li>
+          
+            <li class="list" data-label="Data & Workflow">
+              <a href="#workflow">
+                <span class="icon"><i class="fa-solid fa-database"></i></span>
+              </a>
+            </li>
+
+            <li class="list" data-label="Modelling">
+              <a href="#model">
+                <span class="icon"><i class="fa-solid fa-sitemap"></i></span>
+              </a>
+            </li>
+
+            <li class="list" data-label="Dashboard Preview">
+              <a href="#dashboard">
+                <span class="icon"><i class="fa-solid fa-tachograph-digital"></i></span>
+              </a>
+            </li>
+            
+            <li class="list" data-label="Insights & Recommendations">
+              <a href="#insight">
+                <span class="icon"><i class="fa-solid fa-lightbulb"></i></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+         <!-- ONE global label that updates -->
+        <div id="sectionLabel" class="section-label">Overview</div>
+      </div>
+
+      <div class="nav-right">
+        <div class="r-trapezoid"></div>
+        <div class="link-nav">
+
+          <div class="expand-btn" data-url="https://github.com/rizkyptr2209/olist-behaviour-segmentation-and-revenue-prediction-analysis">
+            <i class="fa-brands fa-github"></i>
+            <span class="label">&nbsp;View on GitHub</span>
+          </div>
+
+          <div class="expand-btn" data-url="https://colab.research.google.com/drive/1-BfOm2Yw1gpZ1Txl2iHPUdp7dZweSvWv?usp=sharing">
+            <i class="fa-solid fa-book-open"></i>
+            <span class="label">&nbsp;Open Notebook</span>
+          </div>
+
+          <div class="expand-btn" data-url="https://drive.google.com/file/d/1-wcBygXqqV9TBxMwN9F6EDFEvn0_nvCs/view?usp=drive_link">
+            <i class="fa-brands fa-slideshare"></i>
+            <span class="label">&nbsp;Download Deck</span>
+          </div>
+
+          <div class="expand-btn" data-url="https://olist-behaviour-segmentation-and-revenue-prediction-analysis.streamlit.app/">
+            <i class="fa-solid fa-rocket"></i>
+            <span class="label">&nbsp;Try on Streamlit</span>
+          </div>
+
+          <a href="index.html" class="back">
+            <i class="fa-solid fa-house"></i>
+          </a>
+
+        </div>
+      
+      </div>
+
+      <!-- Hamburger for mobile -->
+      <div class="hamburger" onclick="openSidebar()">☰</div>
+
+    </nav>
+  </header>
+
+  <!-- Sidebar Top buttons -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-top-left">
+        <div class="sidelink-nav">
+          
+          <a href="index.html" class="back">
+            <i class="fa-solid fa-house"></i>
+            <span class="label">&nbsp;Back to Home</span>
+          </a>
+
+          <div class="stretch-btn" data-url="https://github.com/rizkyptr2209/olist-behaviour-segmentation-and-revenue-prediction-analysis">
+            <i class="fa-brands fa-github"></i>
+            <span class="label">&nbsp; View on GitHub</span>
+          </div>
+
+          <div class="stretch-btn" data-url="https://colab.research.google.com/drive/1-BfOm2Yw1gpZ1Txl2iHPUdp7dZweSvWv?usp=sharing">
+            <i class="fa-solid fa-book-open"></i>
+            <span class="label">&nbsp; Open Notebook</span>
+          </div>
+
+          <div class="stretch-btn" data-url="https://drive.google.com/file/d/1-wcBygXqqV9TBxMwN9F6EDFEvn0_nvCs/view?usp=drive_link">
+            <i class="fa-brands fa-slideshare"></i>
+            <span class="label">&nbsp; Download Deck</span>
+          </div>
+
+          <div class="stretch-btn" data-url="https://olist-behaviour-segmentation-and-revenue-prediction-analysis.streamlit.app/">
+            <i class="fa-solid fa-rocket"></i>
+            <span class="label">&nbsp; Try on Streamlit</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="sidebar-top-right">
+        <span class="closebtn" onclick="closeSidebar()">×</span>
+      </div>
+    </div>
+  
+  <!-- Sidebar Contents -->
+    <div class="sidebar-navigation">
+      <div class="sidebar-logo">
+        <div class="sidebar-active" id="sidebarActiveIcon">
+        <i class="fa-solid fa-file-lines"></i>
+        </div>
+      </div>
+      <div class="sidebar-contents">
+        <div class="sidebar-links">
+          <ul>
+            <li class="side-list active" data-label="Overview">
+              <a href="#overview" onclick="setActiveIcon('fa-solid fa-file-lines')">
+              </a>
+            </li>
+          
+            <li class="side-list" data-label="Data & Workflow">
+              <a href="#workflow" onclick="setActiveIcon('fa-solid fa-database')">
+              </a>
+            </li>
+
+            <li class="side-list" data-label="Modelling">
+              <a href="#model" onclick="setActiveIcon('fa-solid fa-sitemap')">
+              </a>
+            </li>
+
+            <li class="side-list" data-label="Dashboard Preview">
+              <a href="#dashboard" onclick="setActiveIcon('fa-solid fa-tachograph-digital')">
+              </a>
+            </li>
+            
+            <li class="side-list" data-label="Insights & Recommendations">
+              <a href="#insight" onclick="setActiveIcon('fa-solid fa-lightbulb')">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="sidesectionLabel" class="sidesection-label">Overview</div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+
+  <!-- Overview Section -->
+  <section id="overview" class="overview-section">
+    <div class="overview-wrapper">
+      <button class="arrow left" aria-label="Previous slide">❮</button>
+
+      <div class="viewport">
+        <div class="overview-slider">
+          <div class="slide"> <!-- Slide 1 -->
+            
+            <div class="slide1BG"></div>
+            <div class="slide1-head">
+              <div class="projecttittle">
+                <h1 class="dropcap">C</h1><h1>ustomer Behaviour Segmentation & Predictive Revenue Modeling</h1>
+                <span>Data Science Final Project | Dibimbing Data Science Bootcamp (2025)</span>
+              </div>
+              <div class="accent-line"></div>
+              <div class="project-nav">
+                <a href="https://github.com/rizkyptr2209/olist-behaviour-segmentation-and-revenue-prediction-analysis"  target="_blank" class="projectlink">
+                  <div class="project-btn">
+                  <i class="fa-brands fa-github"></i>
+                  <span class="label">&nbsp;View on GitHub</span>
+                </div>
+                </a>
+                <a href="https://drive.google.com/file/d/1-wcBygXqqV9TBxMwN9F6EDFEvn0_nvCs/view?usp=drive_link" target="_blank" class="projectlink">
+                  <div class="project-btn">
+                    <i class="fa-brands fa-slideshare"></i>
+                    <span class="label">&nbsp;Download Deck</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="description-wrapper">
+              <div class="description">
+                <p>In today's competitive e-commerce space, understanding customer behavior is critical for retention and profitability. This project uses real-world transactional data from the Olist marketplace in Brazil to segment customers using RFML (Recency, Frequency, Monetary, Loyalty) and predicted their total sales contribution using Random Forest.</p>
+              </div>
+            </div>
+            
+            <div class="resultsummary-wrapper">
+              <div class="resultsummary">
+                <p>The model achieved R² = 0.727 and MAPE = 17%, enabling data-driven prioritization of customer segments by predicting sales contribution with 72% accuracy and segmenting users into five actionable profiles.</p>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="slide"> <!-- Slide 2 -->
+            <div class="slide2BG"></div>
+            <div class="slide2title">
+              <h1><span class="name-highlight">Model Performance</span>&nbsp;& Segmentation Results</h1>
+            </div>
+            <div class="graphs-layout">
+
+              <div class="segmentation-model">
+                <div class="graph">
+                  <img src="static\Tsne Cluster.png" alt="Olist Segmentation" class="clickable-img">
+                </div>
+                <div class="graph-info">
+                  <h4>Olist Segmentation</h4>
+                  <p>The t-SNE visualization of GMM clusters reveals clear separation between customer groups, suggesting that the segmentation successfully captures distinct purchasing behaviors.</p>
+                </div>
+              </div>
+
+              <div class="prediction-model">
+                <div class="graph">
+                  <img src="static\Model comparison.png" alt="Prediction Model Comparison" class="clickable-img">
+                </div>
+                <div class="graph-info">
+                  <h4>Prediction Model Comparison</h4>
+                  <p>The model comparison chart shows that tree-based models outperform linear regression, with Random Forest achieving a strong balance between training (R² ≈ 0.85) and testing performance (R² ≈ 0.73), indicating good generalization with minimal overfitting.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="slide"> <!-- Slide 3 -->
+            <div class="slide3BG"></div>
+            <div class="slide3title">
+              <h1><span class="name-highlight">Method</span><span>ology</span></h1>
+            </div>
+            <div class="methodology-layout">
+
+              <div class="diagram-area">
+                <button class="bubble active" data-id="framework"><i class="fa-solid fa-brain"></i></button>
+                <button class="bubble" data-id="visual"><i class="fa-solid fa-chart-column"></i></button>
+                <button class="bubble" data-id="segment"><i class="fa-solid fa-chart-pie"></i></button>
+                <button class="bubble" data-id="regress"><i class="fa-solid fa-arrow-up-right-dots"></i></button>
+                <button class="bubble" data-id="tools"><i class="fa-solid fa-screwdriver-wrench"></i></button>
+              </div>
+
+              <div class="content-area">
+                <div class="content active" id="framework">
+                  <h1>Framework</h1>
+                  <p>This project follows the CRISP-DM framework, ensuring a structured and business-driven data science workflow. The process begins with understanding business objectives related to customer behavior and revenue optimization, followed by data understanding and preparation to address missing values, outliers, and feature engineering. Modeling and evaluation stages focus on aligning technical performance with business relevance, while the final deployment and insights phases translate analytical results into clear recommendations for decision-making.</p>
+                </div>
+                <div class="content" id="visual">
+                  <h1>Visualization</h1>
+                  <p>Data visualizations play a critical role in bridging analysis and business communication. Tools such as Tableau and Python-based plotting libraries are used to present model performance, customer distributions, and segmentation patterns in a clear and intuitive manner. These visualizations are designed not only to explore data internally but also to support stakeholder understanding through dashboards that emphasize trends, comparisons, and actionable insights.</p>
+                </div>
+                <div class="content" id="segment">
+                  <h1>RFML Segmentation</h1>
+                  <p>Customer segmentation is performed using a Gaussian Mixture Model (GMM) to capture overlapping and probabilistic customer behaviors more effectively than rigid clustering methods. By combining RFML features (Recency, Frequency, Monetary, and Loyalty), GMM allows customers to belong to clusters based on likelihood rather than hard boundaries. This approach results in more realistic and interpretable segments that better reflect diverse purchasing patterns within the Olist customer base.</p>
+                </div>
+                <div class="content" id="regress">
+                  <h1>Regression Model</h1>
+                  <p>For revenue prediction, a Random Forest regression model is selected due to its ability to model non-linear relationships and handle complex feature interactions. Compared to simpler models, Random Forest demonstrates superior test performance while maintaining robustness against overfitting. This makes it well-suited for predicting total customer revenue and supporting data-driven forecasting and strategic planning.</p>
+                </div>
+                <div class="content" id="tools">
+                  <h1>Tools Used</h1>
+                  <p>The project leverages a modern data science toolset to support the full analytical lifecycle. Google Colab is used for data processing, modeling, and experimentation in Python, while Tableau is utilized for interactive dashboards and business-focused visual storytelling. Additionally, Streamlit is prepared for model deployment and result demonstration, enabling stakeholders to interact with predictive outputs in a user-friendly environment.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="arrow right" aria-label="Next slide">❯</button>
+    </div>
+
+    <div class="indicators" role="tablist" aria-label="Overview parts">
+      <button class="dot active" aria-label="Go to part 1"></button>
+      <button class="dot" aria-label="Go to part 2"></button>
+      <button class="dot" aria-label="Go to part 3"></button>
+    </div>
+  </section>
+
+  <!-- Data & Workflow Section -->
+  <section id="workflow" class="da-wo-section">
+    <div class="da-wo-header">
+      <h1><span class="name-highlight">Data</span><span>&nbsp& Workflow</span></h1>
+      <span>See full documentation</span>
+      <a href="https://colab.research.google.com/drive/1-BfOm2Yw1gpZ1Txl2iHPUdp7dZweSvWv?usp=sharing" target="_blank" class="projectlink">
+        <div class="doc-btn">
+          <i class="fa-solid fa-book-open"></i>
+          <span class="label">&nbsp; Open Notebook</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="da-wo-wrapper">
+      
+      <div class="kpi">
+        <ul>
+          <li class="datainfograph">
+            <div class="kpi-icon">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </div>
+            <div class="kpi-info">
+              <h1>Dataset Source</h1>
+              <h3 class="name-highlight">Kaggle</h3>
+              <p>Brazilian E-Commerce Public Dataset by Olist</p>
+            </div>
+          </li>
+
+          <li class="datainfograph">
+            <div class="kpi-icon">
+              <i class="fa-solid fa-hourglass-end"></i>
+            </div>
+            <div class="kpi-info">
+              <h1>Timeframe</h1>
+              <p>2016 - 2018</p>
+            </div>
+          </li>
+
+          <li class="datainfograph">
+            <div class="kpi-icon">
+              <i class="fa-solid fa-sort"></i>
+            </div>
+            <div class="kpi-info">
+              <h1>Data Size</h1>
+              <h3>9 tables</h3>
+              <p>118.760 data entry</p>
+            </div>
+          </li>
+
+          <li class="datainfograph">
+            <div class="kpi-icon">
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div class="kpi-info">
+              <h1>Features</h1>
+              <ul>
+                <li>Order status</li>
+                <li>Price</li>
+                <li>Payment</li>
+                <li>Freight performance</li>
+                <li>Customer location</li>
+                <li>Product attributes</li>
+                <li>Reviews</li>
+                <li>Geolocation</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="datainfograph">
+            <div class="kpi-icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div class="kpi-info">
+              <h1>Core Target</h1>
+              <p>Identifying and prioritizing the most valuable customers to optimize marketing strategies and maximize future revenue</p>
+            </div>
+          </li>
+
+          <li class="datainfograph">
+            <div class="kpi-icon">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <div class="kpi-info">
+              <h1>Objectives</h1>
+              <ul>
+                <li>Perform customer segmentation using RFML (Recency, Frequency, Monetary, Loyalty) analysis to identify actionable customer groups.</li>
+                <li>Build a regression model to predict each customer’s total sales contribution, enabling better forecasting and strategic planning.</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="distribution">
+
+        <h2>RFML Distribution</h2>
+
+        <div class="distribution-content">
+          <div class="rfml-button">
+            <button class="selector active" data-select="R"><span>R</span></button>
+            <button class="selector" data-select="F"><span>F</span></button>
+            <button class="selector" data-select="M"><span>M</span></button>
+            <button class="selector" data-select="L"><span>L</span></button>
+          </div>
+
+          <div class="rfml-info">
+            <div class="understand active" id="R">
+              <h1>Recency</h1>
+              <div class="distribution-graph">
+                <img src="static\RDist.png" alt="Recency Distribution" class="clickable-img">
+              </div>
+              <p>Most customers have not purchased very recently, the distribution is relatively uniform across 100-400 days, with fewer highly recent customers.</p>
+            </div>
+            <div class="understand" id="F">
+              <h1>Frequency</h1>
+              <div class="distribution-graph">
+                <img src="static\FDist.png" alt="Frequency Distribution" class="clickable-img">
+              </div>
+              <p>The majority of customers are one-time buyers, with a steep drop-off beyond 2 purchases, while a tiny fraction are repeat buyers with significantly higher frequency. This indicates a high acquisition rate but low retention.</p>
+            </div>
+            <div class="understand" id="M">
+              <h1>Monetary</h1>
+              <div class="distribution-graph">
+                <img src="static\MDist.png" alt="Monetary Distribution" class="clickable-img">
+              </div>
+              <p>Most transactions fall below 500 units, with a long tail of high spenders. These rare, high-value customers are likely key revenue drivers.</p>
+            </div>
+            <div class="understand" id="L">
+              <h1>Loyalty</h1>
+              <div class="distribution-graph">
+                <img src="static\LDist.png" alt="Loyalty Distribution" class="clickable-img">
+              </div>
+              <p>Most customers have short engagement lifetimes, with most buyers appearing only once or twice across the dataset timeframe while a minority maintain long-term relationships with the platform.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="preprocess">
+        <h2>Data Preprocessing</h2>
+        <div class="progress-line">
+
+          <div class="step">
+            <div class="progress-content">
+              <h2>Raw Data</h2>
+              <p>Begin with 118760 rows of raw data.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="progress-content">
+              <h2>Duplicates Handling</h2>
+              <p>Dropping 12,439 rows of duplicates.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="progress-content">
+              <h2>Invalid Values Handling</h2>
+              <p>All values are already standardized and no categorical columns that can be simplified.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="progress-content">
+              <h2>Missing Values Handling</h2>
+              <p>Dropping 3406 rows with missing values.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="progress-content">
+              <h2>Outliers Handling</h2>
+              <p>Outliers considered normal due to the naturally diverse distribution of order values and customer locations.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="progress-content">
+              <h2>Feature Engineering</h2>
+              <p>Aggregating RFML Features + Target.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="progress-content">
+              <h2>Cleaned Data</h2>
+              <p>Remained 93101 rows of cleaned data after preprocessing.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+
+  <!-- Modelling Section -->
+  <section id="model" class="model-section">
+    <div class="model-header">
+      <h1>Modelling</h1>
+      <a href="https://olist-behaviour-segmentation-and-revenue-prediction-analysis.streamlit.app/" target="_blank" class="projectlink">
+        <div class="model-btn">
+          <i class="fa-solid fa-rocket"></i>
+          <span class="label">&nbsp;Try Model on Streamlit</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="model-layout">
+
+      <div class="model-wrapper">
+        <div class="model-used">
+          <div class="model-icon">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <div class="model-content">
+            <h1>Segmentation Model</h1>
+            <h2 class="name-highlight">Gaussian Mixture Model (GMM)</h2>
+            <ul>
+              <li>Allows for soft clustering and slightly better at  handles outliers and  overlapping customer behaviors compared to K‑Means.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="model-result">
+          <p>5 distinct RFML-based customer segments with clear behavioral and revenue differences.</p>
+        </div>
+      </div>
+
+      <div class="model-wrapper">
+        <div class="model-used">
+          <div class="model-icon">
+            <i class="fa-solid fa-arrow-up-right-dots"></i>
+          </div>
+          <div class="model-content">
+            <h1>Prediction Model</h1>
+            <h2 class="name-highlight">Random Forest Regressor</h2>
+            <ul>
+              <li>Best trade‑off between accuracy and generalization (test R² ≈ 0.727, MAPE ≈ 17%).</li>
+              <li>Handles non-linear relationships and feature interactions in RFML data.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="model-result">
+          <p>Predicts each customer’s total sales contribution, enabling personalized revenue forecasts.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Dashboard Preview Section -->
+  <section id="dashboard" class="dashboard-section">
+    <div class="dashboard-header">
+      <h1><span class="name-highlight">Dashboard</span></h1>
+      <a href="https://public.tableau.com/shared/FW8MSMQBB?:display_count=n&:origin=viz_share_link" target="_blank" class="projectlink">
+        <div class="dash-btn">
+          <i class="fa-solid fa-tachograph-digital"></i>
+          <span class="label">&nbsp;View on Tableau</span>
+        </div>
+      </a>
+    </div>
+    <div class="dash-layout">
+      <div class="dash-container">
+          
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+        <input type="radio" name="slider" id="s4">
+        <input type="radio" name="slider" id="s5">
+
+        <div class="cards">
+
+          <label for="s1" id="slide1">
+
+            <div class="card">
+
+              <div class="image">
+                <img src="static\SAC.png" alt="Segments Average Contribution" class="clickable-img">
+              </div>
+
+              <div class="infos">
+                <span class="name">Segments Average Contribution</span>
+                <div class="actions">
+
+                  <button class="prev" data-target="s5"><i class="fa-solid fa-caret-left"></i>&nbsp;Previous</button>
+                  <button class="next" data-target="s2">Next&nbsp;<i class="fa-solid fa-caret-right"></i></button>
+                    
+                </div>
+              </div>
+                
+            </div>
+          </label>
+
+          <label for="s2" id="slide2">
+
+            <div class="card">
+
+              <div class="image">
+                <img src="static\logo placeholder.png" alt="Segments Total Contribution" class="clickable-img">
+              </div>
+
+              <div class="infos">
+                <span class="name">Segments Total Contribution</span>
+                <div class="actions">
+
+                  <button class="prev" data-target="s1"><i class="fa-solid fa-caret-left"></i>&nbsp;Previous</button>
+                  <button class="next" data-target="s3">Next&nbsp;<i class="fa-solid fa-caret-right"></i></button>
+                    
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <label for="s3" id="slide3">
+
+            <div class="card">
+
+              <div class="image">
+                <img src="static\logo placeholder.png" alt="RFML Segmentation" class="clickable-img">
+              </div>
+
+              <div class="infos">
+                <span class="name">RFML Segmentation</span>
+                <div class="actions">
+
+                  <button class="prev" data-target="s2"><i class="fa-solid fa-caret-left"></i>&nbsp;Previous</button>
+                  <button class="next" data-target="s4">Next&nbsp;<i class="fa-solid fa-caret-right"></i></button>
+                    
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <label for="s4" id="slide4">
+
+            <div class="card">
+
+              <div class="image">
+                <img src="static\logo placeholder.png" alt="RFML Average Distribution" class="clickable-img">
+              </div>
+
+              <div class="infos">
+                <span class="name">RFML Average Distribution</span>
+                <div class="actions">
+
+                  <button class="prev" data-target="s3"><i class="fa-solid fa-caret-left"></i>&nbsp;Previous</button>
+                  <button class="next" data-target="s5">Next&nbsp;<i class="fa-solid fa-caret-right"></i></button>
+
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <label for="s5" id="slide5">
+
+            <div class="card">
+
+              <div class="image">
+                <img src="static\logo placeholder.png" alt="Olist Customer Distribution" class="clickable-img">
+              </div>
+
+              <div class="infos">
+                <span class="name">Olist Customer Distribution</span>
+                <div class="actions">
+
+                  <button class="prev" data-target="s4"><i class="fa-solid fa-caret-left"></i>&nbsp;Previous</button>
+                  <button class="next" data-target="s1">Next&nbsp;<i class="fa-solid fa-caret-right"></i></button>
+                    
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="dash-explain">
+        <h2>Explanation</h2>
+        
+        <div class="explain explain-1">
+          <p>Explanation for Segments Average Contribution</p>
+        </div>
+
+        <div class="explain explain-2">
+          <p>Explanation for Segments Total Contribution</p>
+        </div>
+
+        <div class="explain explain-3">
+          <p>Explanation for RFML Segmentation</p>
+        </div>
+
+        <div class="explain explain-4">
+          <p>Explanation for RFML Average Distribution</p>
+        </div>
+
+        <div class="explain explain-5">
+          <p>Explanation for Olist Customer Distribution</p>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Insights & Recommendation Section -->
+  <section id="insight" class="in-re-section">
+    <div class="in-re-header">
+      <h1><span class="name-highlight">Insights</span><span>&nbsp;& Recommendation</span></h1>
+    </div>
+
+    <div class="segment-selection">
+      <div class="selection-title">
+        <h1>Select a segment</h1>
+      </div>
+      <ul>
+        <li class="segment active" data-name="lvi">
+          <div class="segment-container">
+            <h2>Low-Value Inactive</h2>
+          </div>
+        </li>
+        <li class="segment" data-name="oths">
+          <div class="segment-container">
+            <h2>One-Time High Spenders</h2>
+          </div>
+        </li>
+        <li class="segment" data-name="er">
+          <div class="segment-container">
+            <h2>Engaged Regulars</h2>
+          </div>
+        </li>
+        <li class="segment" data-name="vip">
+          <div class="segment-container">
+            <h2>VIP Customers</h2>
+          </div>
+        </li>
+        <li class="segment" data-name="ms">
+          <div class="segment-container">
+            <h2>Moderate Spenders</h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="segment-info active" id="lvi">
+      <h2>Segment Summary</h2>
+      <div class="info-category">
+
+        <div class="stats">
+          <div class="rfmlscore">
+            <div class="score R">
+              <h3>Recency</h3>
+              <span>273</span>
+            </div>
+            <div class="score F">
+              <h3>Frequency</h3>
+              <span>1.0</span>
+            </div>
+            <div class="score M">
+              <h3>Monetary</h3>
+              <span>104</span>
+            </div>
+            <div class="score L">
+              <h3>Loyalty</h3>
+              <span>0</span>
+            </div>
+          </div>
+
+          <div class="traits">
+            <h3>Traits</h3>
+            <p>Dormant, low spenders, single orders</p>
+          </div>
+
+        </div>
+
+        <div class="avatar">
+          <img src="static\LV-removebg-preview.png" alt="Segment Icon" class="clickable-img">
+        </div>
+      </div>
+
+      <div class="info-strategy">
+        <h4><span class="name-highlight">Key</span>&nbsp;Takeaways:</h4>
+        <span>Dormant clusters represent potential reactivation campaigns with targeted offers.</span>
+        <h4><span class="name-highlight">Recommended</span>&nbsp;Strategy:</h4>
+        <span class="strategy">Reactivate Dormant Customers</span>
+        <ol>
+          <li>Run win-back campaigns with limited-time offers emphasizing urgency.</li>
+          <li>Use personalized email campaigns with dynamic content based on their last purchase.</li>
+          <li>Introduce gamified reactivation programs (e.g., “Come back and earn double points on your next order”).</li>
+          <li>Offer first-purchase discounts for reactivated customers to lower their re-entry barrier.</li>
+          <li>Analyze churn reasons through exit surveys and adjust product, pricing, or service strategies accordingly.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="segment-info" id="oths">
+      <h2>Segment Summary</h2>
+      <div class="info-category">
+
+        <div class="stats">
+          <div class="rfmlscore">
+            <div class="score R">
+              <h3>Recency</h3>
+              <span>277</span>
+            </div>
+            <div class="score F">
+              <h3>Frequency</h3>
+              <span>1.0</span>
+            </div>
+            <div class="score M">
+              <h3>Monetary</h3>
+              <span>526</span>
+            </div>
+            <div class="score L">
+              <h3>Loyalty</h3>
+              <span>0</span>
+            </div>
+          </div>
+
+          <div class="traits">
+            <h3>Traits</h3>
+            <p>Dormant, higher-value one-time buyers</p>
+          </div>
+
+        </div>
+
+        <div class="avatar">
+          <img src="static\OHS-removebg-preview.png" alt="Segment Icon" class="clickable-img">
+        </div>
+      </div>
+
+      <div class="info-strategy">
+        <h4><span class="name-highlight">Key</span>&nbsp;Takeaways:</h4>
+        <span>One-time big spenders are a recovery opportunity — converting even 10–15% into repeat buyers would significantly boost revenue.</span>
+        <h4><span class="name-highlight">Recommended</span>&nbsp;Strategy:</h4>
+        <span class="strategy">Convert One-time High Spenders</span>
+        <ol>
+          <li>Offer personalized bundles or cross-category recommendations based on their high-value purchase.</li>
+          <li>Provide exclusive post-purchase follow-up offers that build trust (e.g., extended warranties, VIP upgrades).</li>
+          <li>Implement lifecycle-triggered engagement (e.g., send reminders or value-added content timed to product usage cycles).</li>
+          <li>Engage with personalized message, offering high-touch communication for premium customers.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="segment-info" id="er">
+      <h2>Segment Summary</h2>
+      <div class="info-category">
+
+        <div class="stats">
+          <div class="rfmlscore">
+            <div class="score R">
+              <h3>Recency</h3>
+              <span>228</span>
+            </div>
+            <div class="score F">
+              <h3>Frequency</h3>
+              <span>2.15</span>
+            </div>
+            <div class="score M">
+              <h3>Monetary</h3>
+              <span>267</span>
+            </div>
+            <div class="score L">
+              <h3>Loyalty</h3>
+              <span>58</span>
+            </div>
+          </div>
+
+          <div class="traits">
+            <h3>Traits</h3>
+            <p>Somewhat active, moderate frequency and loyalty</p>
+          </div>
+
+        </div>
+
+        <div class="avatar">
+          <img src="static\ER-removebg-preview.png" alt="Segment Icon" class="clickable-img">
+        </div>
+      </div>
+
+      <div class="info-strategy">
+        <h4><span class="name-highlight">Key</span>&nbsp;Takeaways:</h4>
+        <span>Moderate-value customers are candidates for loyalty programs to increase repeat purchases.</span>
+        <h4><span class="name-highlight">Recommended</span>&nbsp;Strategy:</h4>
+        <span class="strategy">Grow Mid-tier Loyalty</span>
+        <ol>
+          <li>Introduce tiered loyalty systems that reward customers as they move up levels (silver → gold → platinum).</li>
+          <li>Offer “spend more, save more” campaigns to encourage upselling.</li>
+          <li>Run community-building activities like product forums or online events to deepen brand engagement.</li>
+          <li>Use A/B testing on product recommendations to optimize repeat purchase triggers.</li>
+          <li>Provide referral incentives, turning loyal mid-tier customers into brand advocates.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="segment-info" id="vip">
+      <h2>Segment Summary</h2>
+      <div class="info-category">
+
+        <div class="stats">
+          <div class="rfmlscore">
+            <div class="score R">
+              <h3>Recency</h3>
+              <span>267</span>
+            </div>
+            <div class="score F">
+              <h3>Frequency</h3>
+              <span>4.23</span>
+            </div>
+            <div class="score M">
+              <h3>Monetary</h3>
+              <span>1498</span>
+            </div>
+            <div class="score L">
+              <h3>Loyalty</h3>
+              <span>16</span>
+            </div>
+          </div>
+
+          <div class="traits">
+            <h3>Traits</h3>
+            <p>High-value, loyal, frequent buyers</p>
+          </div>
+
+        </div>
+
+        <div class="avatar">
+          <img src="static\VIP-removebg-preview.png" alt="Segment Icon" class="clickable-img">
+        </div>
+      </div>
+
+      <div class="info-strategy">
+        <h4><span class="name-highlight">Key</span>&nbsp;Takeaways:</h4>
+        <span>High-value customers require retention and upselling strategies, as they are the core of the business.</span>
+        <h4><span class="name-highlight">Recommended</span>&nbsp;Strategy:</h4>
+        <span class="strategy">Retain High-Value Buyers</span>
+        <ol>
+          <li>Offer priority customer service (dedicated support line, faster issue resolution).</li>
+          <li>Create exclusive loyalty tiers with experiential rewards (e.g., invitations to events, early access to new products).</li>
+          <li>Use predictive analytics to anticipate churn and trigger proactive retention campaigns.</li>
+          <li>Encourage subscription models or auto-replenishment to lock in recurring revenue.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="segment-info" id="ms">
+      <h2>Segment Summary</h2>
+      <div class="info-category">
+
+        <div class="stats">
+          <div class="rfmlscore">
+            <div class="score R">
+              <h3>Recency</h3>
+              <span>289</span>
+            </div>
+            <div class="score F">
+              <h3>Frequency</h3>
+              <span>2.13</span>
+            </div>
+            <div class="score M">
+              <h3>Monetary</h3>
+              <span>287</span>
+            </div>
+            <div class="score L">
+              <h3>Loyalty</h3>
+              <span>0</span>
+            </div>
+          </div>
+
+          <div class="traits">
+            <h3>Traits</h3>
+            <p>Recently inactive, occasional moderate spenders</p>
+          </div>
+
+        </div>
+
+        <div class="avatar">
+          <img src="static\MS-removebg-preview.png" alt="Segment Icon" class="clickable-img">
+        </div>
+      </div>
+
+      <div class="info-strategy">
+        <h4><span class="name-highlight">Key</span>&nbsp;Takeaways:</h4>
+        <span>Dormant clusters represent potential reactivation campaigns with targeted offers.</span>
+        <h4><span class="name-highlight">Recommended</span>&nbsp;Strategy:</h4>
+        <span class="strategy">Reactivate Dormant Customers</span>
+        <ol>
+          <li>Run win-back campaigns with limited-time offers emphasizing urgency.</li>
+          <li>Use personalized email campaigns with dynamic content based on their last purchase.</li>
+          <li>Introduce gamified reactivation programs (e.g., “Come back and earn double points on your next order”).</li>
+          <li>Offer first-purchase discounts for reactivated customers to lower their re-entry barrier.</li>
+          <li>Analyze churn reasons through exit surveys and adjust product, pricing, or service strategies accordingly.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Sections -->
+  <section class="contact" id="contact">
+    <div class="contact-background">
+      <span></span>
+    </div>
+    <div class="contact-container">
+      
+      <div class="contact-info">
+        <div class="info-title">
+          <h2>Let’s Get In Touch</h2>
+          <p>Reach me directly through the details below:</p>
+        </div>
+
+
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="item-desc">
+            <h4>Address</h4>
+            <span>Jakarta, Indonesia</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div class="item-desc">
+            <h4>Email</h4>
+            <span>rizkypl2209@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div class="item-desc">
+            <h4>Phone</h4>
+            <span>+62 888-0987-7822</span>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/rizkyputral22" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/rizkyptr2209" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/rp.lksmana/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-element">
+          <span></span>
+        </div>
+        <form 
+          name="contact" 
+          method="POST" 
+          data-netlify="true" 
+          action="/success"
+        >
+          <input type="hidden" name="form-name" value="contact">
+
+          <label for="name">Full Name</label>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <label for="email">Email Address</label>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+
+          <label for="phone">Phone Number</label>
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+          </div>
+
+          <label for="message">Message</label>
+          <div class="input-group textarea">
+            <i class="fas fa-comment-alt"></i>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              maxlength="300" 
+              placeholder="Enter your message" 
+              required
+            ></textarea>
+            <div class="char-counter" id="char-counter">0 / 300</div>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  </section>
+
+  <footer class="footer">
+        <p>© 2025 Rizky Putra Laksmana. All rights reserved.</p>
+  </footer>
+
+  <a 
+    href="https://wa.me/6288809877822?text=Hi%20Rizky!%20We%20love%20your%20project%20and%20decided%20that%20we%20would%20like%20to%20connect%20with%20you." 
+    class="floating-wa-btn" 
+    target="_blank" 
+    aria-label="Contact me on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Overlay for blur -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- The popup modal -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    
+
+    const navItems = document.querySelectorAll('.list');
+    const label = document.getElementById('sectionLabel');
+
+    // Map section IDs to nav items
+    const sectionMap = {};
+
+    navItems.forEach(item => {
+      const link = item.querySelector('a');
+      const id = link.getAttribute('href').replace('#', '');
+      sectionMap[id] = item;
+    });
+
+    // Observe sections
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            const activeItem = sectionMap[id];
+
+            if (!activeItem) return;
+
+            // Update active nav
+            navItems.forEach(li => li.classList.remove('active'));
+            activeItem.classList.add('active');
+
+            // Update label
+            label.textContent = activeItem.dataset.label;
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.18 // section is considered active when 60% visible
+      }
+    );
+
+    // Start observing
+    Object.keys(sectionMap).forEach(id => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const text = item.dataset.label;
+        label.textContent = text;
+      });
+    });
+
+    const sidelist = document.querySelectorAll('.side-list');
+    function activeSideLink(){
+      sidelist.forEach((item) => item.classList.remove('active'));
+      this.classList.add('active');
+    }
+    sidelist.forEach((item) => item.addEventListener('click',activeSideLink));
+
+    function openSidebar() {
+      document.getElementById("sidebar").style.width = "80%";
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").style.width = "0";
+      document.getElementById("overlay").style.display = "none";
+    }
+
+    function setActiveIcon(iconClass) {
+      document.getElementById("sidebarActiveIcon").innerHTML = `<i class="fas ${iconClass}"></i>`;
+    }
+
+    const otherlist = document.querySelectorAll('.side-list');
+    const otherlabel = document.getElementById('sidesectionLabel');
+
+    otherlist.forEach(item => {
+    item.addEventListener('click', function() {
+
+        // remove previous active
+        otherlist.forEach(li => li.classList.remove('active'));
+
+        // add new active
+        this.classList.add('active');
+
+        // update label
+        const text = this.getAttribute('data-label');
+        otherlabel.textContent = text;
+    });
+    });
+
+    // Expandable Button
+    const buttons = document.querySelectorAll(".expand-btn");
+
+    buttons.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation(); // Prevent document click from firing immediately
+
+      // If already active → second click = open link
+      if (this.classList.contains("active")) {
+        window.open(this.dataset.url, "_blank");
+        return;
+      }
+
+      // Otherwise → activate this one only
+      buttons.forEach(b => b.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".expand-btn")) {
+      buttons.forEach(b => b.classList.remove("active"));
+    }
+  });
+
+  const sidebuttons = document.querySelectorAll(".stretch-btn");
+
+  sidebuttons.forEach(btn => {
+    btn.addEventListener("click", function (g) {
+      g.stopPropagation(); // Prevent document click from firing immediately
+
+      // If already active → second click = open link
+      if (this.classList.contains("active")) {
+        window.open(this.dataset.url, "_blank");
+        return;
+      }
+
+      // Otherwise → activate this one only
+      sidebuttons.forEach(b => b.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+  document.addEventListener("click", function (g) {
+    if (!g.target.closest(".stretch-btn")) {
+      sidebuttons.forEach(b => b.classList.remove("active"));
+    }
+  });
+  
+    // Get modal
+    var modal = document.getElementById("imgModal");
+    var modalImg = document.getElementById("modalImage");
+    var captionText = document.getElementById("caption");
+
+    // Click image to open modal
+    document.querySelectorAll(".clickable-img").forEach(img => {
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+    });
+
+    // Close modal
+    document.querySelector(".close").onclick = function() {
+      modal.style.display = "none";
+    };
+
+    // Sliding Sections
+    (function () {
+      const slider = document.querySelector('.overview-slider');
+      const viewport = document.querySelector('.viewport');
+      const dots = Array.from(document.querySelectorAll('.dot'));
+      const leftBtn = document.querySelector('.arrow.left');
+      const rightBtn = document.querySelector('.arrow.right');
+
+      let slides = Array.from(slider.children);
+      const gap = parseInt(getComputedStyle(slider).gap) || 24;
+
+      // Clone first & last slides
+      const firstClone = slides[0].cloneNode(true);
+      const lastClone = slides[slides.length - 1].cloneNode(true);
+
+      slider.appendChild(firstClone);
+      slider.insertBefore(lastClone, slides[0]);
+
+      // Rebuild slides list including clones
+      slides = Array.from(slider.children);
+
+      let current = 1; // start at first REAL slide (index 1)
+      let isDragging = false;
+      let startX = 0;
+      let prevTranslate = 0;
+      let threshold = 50;
+
+      function updateDots() {
+        dots.forEach((d, i) => d.classList.toggle("active", i === current - 1));
+      }
+
+      function slideTo(index, withTransition = true) {
+        const width = viewport.clientWidth + gap;
+
+        slider.style.transition = withTransition ? "transform 400ms ease" : "none";
+        slider.style.transform = `translateX(-${width * index}px)`;
+
+        current = index;
+
+        if (index >= 1 && index <= 3) {
+          updateDots();
+        }
+      }
+
+      // On transition end, if at clone → jump to real slide instantly
+      slider.addEventListener("transitionend", () => {
+        if (current === slides.length - 1) {
+          slideTo(1, false); // Jump to real first
+        }
+        if (current === 0) {
+          slideTo(3, false); // Jump to real last
+        }
+      });
+
+      // Buttons
+      rightBtn.addEventListener("click", () => {
+        slideTo(current + 1);
+      });
+
+      leftBtn.addEventListener("click", () => {
+        slideTo(current - 1);
+      });
+
+      // Dot click
+      dots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+          slideTo(idx + 1);
+        });
+      });
+
+      // Pointer events for drag
+      slider.addEventListener("pointerdown", (e) => {
+        if (e.pointerType === "mouse" && e.button !== 0) return;
+        isDragging = true;
+        startX = e.clientX;
+        prevTranslate = (viewport.clientWidth + gap) * current;
+        slider.style.transition = "none";
+        slider.setPointerCapture(e.pointerId);
+      });
+
+      window.addEventListener("pointermove", (e) => {
+        if (!isDragging) return;
+        const dx = e.clientX - startX;
+        const translate = prevTranslate - dx;
+        slider.style.transform = `translateX(-${translate}px)`;
+      });
+
+      window.addEventListener("pointerup", (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const dx = e.clientX - startX;
+
+        if (Math.abs(dx) > threshold) {
+          if (dx < 0) slideTo(current + 1);
+          else slideTo(current - 1);
+        } else {
+          slideTo(current);
+        }
+
+        try { slider.releasePointerCapture(e.pointerId); } catch (_) {}
+      });
+
+      // Initialize position
+      slideTo(1);
+    })();
+
+    // Hero anchors
+    const navis = document.querySelectorAll('.projectlink');
+
+    navis.forEach(projectlink => {
+      projectlink.addEventListener("pointerdown", e => {
+        e.stopPropagation();
+      });
+
+      projectlink.addEventListener("click", e => {
+        e.stopPropagation();
+      });
+    });
+    
+    // Graph clickable
+    const graphs = document.querySelectorAll(".clickable-img");
+    
+    graphs.forEach(img => {
+      img.addEventListener("pointerdown", e => {
+        e.stopPropagation();
+      });
+
+      img.addEventListener("click", e => {
+        e.stopPropagation();
+      });
+    });
+
+    // Methodology slides
+    const bubbles = document.querySelectorAll('.bubble');
+
+    bubbles.forEach(bubble => {
+      bubble.addEventListener("pointerdown", e => {
+        e.stopPropagation();
+      });
+
+      bubble.addEventListener("click", e => {
+        e.stopPropagation();
+
+        const slide = bubble.closest('.slide');
+        const contents = slide.querySelectorAll('.content');
+        const bubblesInSlide = slide.querySelectorAll('.bubble');
+
+        bubblesInSlide.forEach(b => b.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        bubble.classList.add("active");
+
+        const target = slide.querySelector(`#${bubble.dataset.id}`);
+        if (target) target.classList.add("active");
+      });
+    });
+
+    // RFML Selector
+    const selections = document.querySelectorAll(".selector");
+    const infosums = document.querySelectorAll(".understand");
+
+    selections.forEach(selector => {
+      selector.addEventListener("click", () => {
+        // remove active from all
+        selections.forEach(s => s.classList.remove("active"));
+        infosums.forEach(i => i.classList.remove("active"));
+
+        // activate clicked
+        selector.classList.add("active");
+        const target = document.getElementById(selector.dataset.select);
+        target.classList.add("active");
+      });
+    });
+
+    // Dahboard Preview Radio
+    document.querySelectorAll(".actions button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-target");
+        const radio = document.getElementById(target);
+
+        if (radio) {
+          radio.checked = true;
+          radio.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+      });
+    });
+
+    (function () {
+      const radios = document.querySelectorAll('input[name="slider"]');
+      const explains = document.querySelectorAll('.explain');
+
+      function updateExplain() {
+        // Find checked radio
+        const checked = document.querySelector('input[name="slider"]:checked');
+        if (!checked) return;
+
+        const index = checked.id.replace('s', ''); // s1 → 1
+
+        // Hide all explanations
+        explains.forEach(e => e.classList.remove('active'));
+
+        // Show matching explanation
+        const target = document.querySelector(`.explain-${index}`);
+        if (target) target.classList.add('active');
+      }
+
+      // Initial state
+      updateExplain();
+
+      // Listen for changes
+      radios.forEach(radio => {
+        radio.addEventListener('change', updateExplain);
+      });
+    })();
+
+    // Insights & Rec active toggles
+    const segments = document.querySelectorAll(".segment");
+    const infos = document.querySelectorAll(".segment-info");
+
+    segments.forEach(segment => {
+      segment.addEventListener("click", () => {
+        // remove active from all
+        segments.forEach(s => s.classList.remove("active"));
+        infos.forEach(i => i.classList.remove("active"));
+
+        // activate clicked
+        segment.classList.add("active");
+        const target = document.getElementById(segment.dataset.name);
+        target.classList.add("active");
+      });
+    });
+
+  </script>
+</body>
+</html>

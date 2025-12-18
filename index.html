@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizky's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+
+      <div class="nav-left">
+        <img src="static/Portfolio Logo.png" alt="Logo" class="logo">
+        <span class="site-name">My Portfolio</span>
+        <div class="nav-cover">
+          <span></span>
+        </div>
+      </div>
+
+       <div class="nav-middle">
+        <ul>
+          <li data-section="hero" class="list active">
+            <a href="#hero">
+              <span><i class="fas fa-home"></i></span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li data-section="about" class="list">
+            <a href="#about">
+              <span><i class="fas fa-id-card"></i></span>
+              <span class="text">About</span>
+            </a>
+          </li>
+          <li data-section="skill" class="list">
+            <a href="#skill">
+              <span><i class="fa-solid fa-award"></i></span>
+              <span class="text">Skills & Certificate</span>
+            </a>
+          </li>
+          <li data-section="projects" class="list">
+            <a href="#projects">
+              <span><i class="fas fa-paper-plane"></i></span>
+              <span class="text">Projects</span>
+            </a>
+          </li>
+          <li data-section="contact" class="list">
+            <a href="#contact">
+              <span><i class="fas fa-phone"></i></span>
+              <span class="text">Contacts</span>
+            </a>
+          </li>
+          <div class="indicator"></div>
+        </ul>
+
+      </div>
+
+      <div class="nav-right">
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/rizkyputral22" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/rizkyptr2209" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="cv-buttons">
+          <a href="#" download class="btn-cv">Download CV<i class="fa-solid fa-download"></i></a>
+        </div>
+      </div>
+
+      <!-- Hamburger for mobile -->
+      <div class="hamburger" onclick="openSidebar()">☰</div>
+
+    </nav>
+  </header>
+
+  <!-- Sidebar Top buttons -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-top-left">
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/rizkyputral22" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/rizkyptr2209" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="cv-buttons">
+          <a href="#" download class="btn-cv">Download CV<i class="fa-solid fa-download"></i></a>
+        </div>
+      </div>
+      <div class="sidebar-top-right">
+        <span class="closebtn" onclick="closeSidebar()">×</span>
+      </div>
+    </div>
+  
+  <!-- Sidebar Contents -->
+    <div class="sidebar-navigation">
+      <div class="sidebar-logo">
+        <div class="sidebar-active" id="sidebarActiveIcon">
+        <i class="fas fa-home"></i>
+        </div>
+      </div>
+      <div class="sidebar-contents">
+        <div class="sidebar-links">
+          <ul>
+            <li class="side-list active">
+              <a href="#" onclick="setActiveIcon('fa-home')">Home</a>
+            </li>
+            <li class="side-list">
+              <a href="#about" onclick="setActiveIcon('fa-id-card')">About</a>
+            </li>
+            <li class="side-list">
+              <a href="#skill" onclick="setActiveIcon('fa-award')">Skills & Certification</a>
+            </li>
+            <li class="side-list">
+              <a href="#projects" onclick="setActiveIcon('fa-paper-plane')">Projects</a>
+            </li>
+            <li class="side-list">
+              <a href="#contact" onclick="setActiveIcon('fa-phone')">Contacts</a>
+            </li>
+            <div class="side-indicator"></div>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <!-- Overlay for blur -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- Hero Sections -->
+  <section id="hero" class="hero">
+    <div class="hero-info">
+      <h1>Rizky Putra Laksmana</h1>
+      <h2>I'm a
+        <span style="--i:2;" data-text="Data Scientist">Data Scientist</span>
+        <span style="--i:1;" data-text="Data Analyst">Data Analyst</span>
+      </h2>
+      <p>I’m a data professional with a strong foundation in mathematics and hands-on experience in data analysis, statistical modeling, and machine learning. I work with real-world datasets to analyze customer behavior and uncover patterns that support data-driven decision-making. My projects combine Python, SQL, and interactive dashboards to translate complex data into clear business insights.</p>
+      <div class="btn-sci">
+        <a href="#" class="btn">Download CV</a>
+        <div class="sci">
+          <a href="https://www.linkedin.com/in/rizkyputral22" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/rizkyptr2209" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rizkypl2209@gmail.com" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.instagram.com/rp.lksmana/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="btn-hire">
+        <div class="hire">
+          <a href="https://wa.me/6288809877822?text=Hi%20Rizky!%20We%20saw%20your%20portfolio%20and%20would%20love%20to%20hire%20you%20into%20our%20company." target="_blank">Hire Me
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <div class="img-box">
+        <div class="img-item">
+          <img src="static\Profile Picture.png" alt="Rizky Putra Laksmana">
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  
+  <!-- About Sections -->
+  <section id="about" class="about">
+    <div class="about-background">
+      <span></span>
+    </div>
+    <div class="about-image">
+        <img src="static/Profile1.png" alt="About Rizky">
+    </div>
+    <div class="about-container">
+      
+      <div class="about-text-left">
+        <h2>Bit About Me</h2>
+        <p>
+          I'm a Mathematics Education graduate and Data Science bootcamp participant with a strong analytical foundation and a passion for turning data into meaningful insights.
+        </p>
+      </div>
+
+      <div class="about-text-right">
+        <p>
+          Experienced in data cleaning, exploratory analysis, and visualization using Python, SQL, Excel, and Power BI to support data-driven decision making. Experienced in data cleaning, exploratory analysis, and visualization using Python, SQL, Excel, and Power BI to support data-driven decision making.
+        </p>
+      </div>
+      
+      <i class="fas fa-database about-icon icon-top-right"></i>
+      <i class="fas fa-chart-line about-icon icon-bottom-left"></i>
+
+    </div>
+
+  </section>
+
+  <!-- Skill Sections -->
+  <section id="skill" class="skill">
+    <div class="skill-container">
+      <h2>Skills & Certifications</h2>
+
+      <!-- Skill Selector -->
+      <div class="skill-selection">
+        <ul>
+          <li class="skills active" data-skill="pro-handle">
+            <div class="skill-category">
+              <h4>Programming & Data Handling</h4>
+              <i class="fas fa-code skill-icon"></i>
+            </div>
+          </li>
+
+          <li class="skills" data-skill="db-de">
+            <div class="skill-category">
+              <h4>Databases & Data Engineering Basics</h4>
+              <i class="fas fa-database skill-icon"></i>
+            </div>
+          </li>
+
+          <li class="skills" data-skill="ml-found">
+            <div class="skill-category">
+              <h4>Machine Learning & Analytical Foundations</h4>
+              <i class="fas fa-brain skill-icon"></i>
+            </div>
+          </li>
+
+          <li class="skills" data-skill="viz-bi">
+            <div class="skill-category">
+              <h4>Data Visualization & Business Communication</h4>
+              <i class="fas fa-chart-pie skill-icon"></i>
+            </div>
+          </li>
+
+          <li class="skills" data-skill="deploy-pro">
+            <div class="skill-category">
+              <h4>Deployment & Professional Skills</h4>
+              <i class="fas fa-computer skill-icon"></i>
+            </div>
+          </li>
+
+          <li class="skills" data-skill="lang">
+            <div class="skill-category">
+              <h4>Languages</h4>
+              <i class="fas fa-language skill-icon"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    <!-- Content Panels -->
+    <div class="skill-content">
+      <!-- Programming & Data Handling -->
+      <div class="skill-panel active" id="pro-handle">
+        
+        <div class="subskill">
+
+        <h3>Subskills</h3>
+
+          <div class="title-wrapper">
+            <span>Python</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:75%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Data manipulation (Pandas, NumPy)</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:85%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Data cleaning & preprocessing</span>
+            <span>80%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:80%;"></div>
+          </div>
+
+        </div>
+        
+        <div class="certs">
+          <div class="cert-head">
+            <h3>Certificates</h3>
+            <div class="cert-buttons">
+              <a href="https://drive.google.com/drive/folders/1jvjwH66YSrI2oYsuhtsoti5SqHQROaGL?usp=drive_link" target="_blank" class="btn-cert"><i class="fa-solid fa-download"></i></a>
+            </div>
+          </div>  
+          <div class="cert-content">
+            <ul class="cert-list">
+              <li class="cert-item">
+                <img src="static\CertPython1.jpg" alt="Python (Basic) .acq: 27-02-2025" class="clickable-img">
+              </li>
+              <li class="cert-item">
+                <img src="static\CertPython2.jpg" alt="Python (Beginner) .acq: 27-02-2025" class="clickable-img">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Databases & Data Engineering Basics -->
+      <div class="skill-panel" id="db-de">
+
+        <div class="subskill">
+
+        <h3>Subskills</h3>
+
+          <div class="title-wrapper">
+            <span>Database management (PostgreSQL, MySQL)</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:90%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Data pipelines</span>
+            <span>70%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:70%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Feature engineering</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:75%;"></div>
+          </div>
+
+        </div>
+        
+        <div class="certs">
+          <div class="cert-head">
+            <h3>Certificates</h3>
+            <div class="cert-buttons">
+              <a href="https://drive.google.com/drive/folders/1jvjwH66YSrI2oYsuhtsoti5SqHQROaGL?usp=drive_link" target="_blank" class="btn-cert"><i class="fa-solid fa-download"></i></a>
+            </div>
+          </div>
+          <div class="cert-content">
+            <ul class="cert-list">
+              <li class="cert-item">
+                <img src="static\CertSQL1.jpg" alt="SQL (Basic) .acq: 07-04-2025" class="clickable-img">
+              </li>
+              <li class="cert-item">
+                <img src="static\CertSQL2.jpg" alt="SQL (Intermediate) .acq: 08-04-2025" class="clickable-img">
+              </li>
+              <li class="cert-item">
+                <img src="static\CertSQL3.jpg" alt="SQL (Advanced) .acq: 08-05-2025" class="clickable-img">
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Machine Learning & Analytical Foundations -->
+      <div class="skill-panel" id="ml-found">
+
+        <div class="subskill">
+
+        <h3>Subskills</h3>
+
+          <div class="title-wrapper">
+            <span>Supervised learning</span>
+            <span>88%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:88%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Unsupervised learning</span>
+            <span>83%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:83%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Model evaluation & metrics</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:90%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Descriptive statistics</span>
+            <span>80%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:80%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Hypothesis testing</span>
+            <span>80%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:80%;"></div>
+          </div>
+
+        </div>
+        
+        <div class="certs">
+          <div class="cert-head">
+            <h3>Certificates</h3>
+            <div class="cert-buttons">
+              <a href="https://drive.google.com/drive/folders/1jvjwH66YSrI2oYsuhtsoti5SqHQROaGL?usp=drive_link" target="_blank" class="btn-cert"><i class="fa-solid fa-download"></i></a>
+            </div>
+          </div>
+          <div class="cert-content">
+            <ul class="cert-list">
+              <li class="cert-item">
+                <img src="static\CertDS.jpg" alt="Data Science Bootcamp .acq: 07-09-2025" class="clickable-img">
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Data Visualization & Business Communication-->
+      <div class="skill-panel" id="viz-bi">
+
+        <div class="subskill">
+
+        <h3>Subskills</h3>
+
+          <div class="title-wrapper">
+            <span>Python libraries (Matplotlib, Seaborn)</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:75%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>BI tools (Power BI, Tableau)</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:85%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Data Storytelling</span>
+            <span>78%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:78%;"></div>
+          </div>
+
+        </div>
+        
+        <div class="certs">
+          <div class="cert-head">
+            <h3>Certificates</h3>
+            <div class="cert-buttons">
+              <a href="https://drive.google.com/drive/folders/1jvjwH66YSrI2oYsuhtsoti5SqHQROaGL?usp=drive_link" target="_blank" class="btn-cert"><i class="fa-solid fa-download"></i></a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Deployment & Professional Skills -->
+      <div class="skill-panel" id="deploy-pro">
+
+        <div class="subskill">
+
+        <h3>Subskills</h3>
+
+          <div class="title-wrapper">
+            <span>Git & GitHub</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:75%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Streamlit</span>
+            <span>93%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:93%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Front-end basics (HTML, CSS, JS)</span>
+            <span>80%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:80%;"></div>
+          </div>
+
+        </div>
+        
+        <div class="certs">
+          <div class="cert-head">
+            <h3>Certificates</h3>
+            <div class="cert-buttons">
+              <a href="https://drive.google.com/drive/folders/1jvjwH66YSrI2oYsuhtsoti5SqHQROaGL?usp=drive_link" target="_blank" class="btn-cert"><i class="fa-solid fa-download"></i></a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Languages -->
+      <div class="skill-panel" id="lang">
+
+        <div class="subskill">
+
+        <h3>Subskills</h3>
+
+          <div class="title-wrapper">
+            <span>Indonesian</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:85%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>English</span>
+            <span>95%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:95%;"></div>
+          </div>
+
+          <div class="title-wrapper">
+            <span>Japanese</span>
+            <span>65%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="--width:65%;"></div>
+          </div>
+
+        </div>
+        
+        <div class="certs">
+          <div class="cert-head">
+            <h3>Certificates</h3>
+            <div class="cert-buttons">
+              <a href="https://drive.google.com/drive/folders/1jvjwH66YSrI2oYsuhtsoti5SqHQROaGL?usp=drive_link" target="_blank" class="btn-cert"><i class="fa-solid fa-download"></i></a>
+            </div>
+          </div>
+          <div class="cert-content">
+            <ul class="cert-list">
+              <li class="cert-item">
+                <img src="static\CertEng1.jpg" alt="Basic Intensive English Program .acq: 08-02-2020" class="clickable-img">
+              </li>
+              <li class="cert-item">
+                <img src="static\CertEng2.jpg" alt="TOEFL LIKE Test .acq: 17-04-2020" class="clickable-img">
+              </li>
+              <li class="cert-item">
+                <img src="static\CertEng3.jpg" alt="EF SET .acq: 08-02-2025" class="clickable-img">
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+
+  </section>
+
+  <!-- Project Sections -->
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="container">
+      
+      <input type="radio" name="slider" id="s1" checked>
+      <input type="radio" name="slider" id="s2">
+      <input type="radio" name="slider" id="s3">
+      <input type="radio" name="slider" id="s4">
+      <input type="radio" name="slider" id="s5">
+
+      <div class="cards">
+
+        <label for="s1" id="slide1">
+
+          <div class="card">
+
+            <div class="image">
+              <img src="static\Section1BG.jpg" alt="Project1">
+              <div class="dots">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="infos">
+              <span class="name">Project 1</span>
+              <span class="lorem">Analyzed real-world Olist transactional data to segment customers using RFML and predict total sales contribution with a Random Forest model (R² ≈ 0.72), producing five actionable customer profiles.</span>
+
+              <a href="p1_olist.html" class="btn-details">
+                <span>See details</span>
+                <span><i class="fas fa-paper-plane"></i></span>
+              </a>
+
+              <div class="actions">
+
+                <a href="https://github.com/rizkyptr2209/olist-behaviour-segmentation-and-revenue-prediction-analysis" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://colab.research.google.com/drive/1-BfOm2Yw1gpZ1Txl2iHPUdp7dZweSvWv?usp=sharing" target="_blank">
+                  <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab" style="width:20px; height:20px;"> Colab
+                </a>
+                <button class="prev" data-target="s5">‹</button>
+                <button class="next" data-target="s2">›</button>
+                
+              </div>
+            </div>
+            
+          </div>
+        </label>
+
+        <label for="s2" id="slide2">
+
+          <div class="card disabled">
+
+            <div class="image">
+              <img src="static\logo placeholder.png" alt="Project2">
+              <div class="dots">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="infos">
+              <span class="name">Upcoming Case Study</span>
+              <span class="lorem">Currently in preparation. This project will explore a real-world business problem using data analysis and machine learning.</span>
+
+              <a href="#" class="btn-disabled">
+                <span>In Preparation</span>
+              </a>
+
+              <div class="actions">
+
+                <a href="#" class="not-available" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" class="not-available" target="_blank">
+                  <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab" style="width:20px; height:20px;"> Colab
+                </a>
+                <button class="prev" data-target="s1">‹</button>
+                <button class="next" data-target="s3">›</button>
+                
+              </div>
+            </div>
+          </div>
+        </label>
+
+        <label for="s3" id="slide3">
+
+          <div class="card disabled">
+
+            <div class="image">
+              <img src="static\logo placeholder.png" alt="Project3">
+              <div class="dots">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="infos">
+              <span class="name">Future Case Study</span>
+              <span class="lorem">Reserved for a future data-driven case study. Details will be added as the project is completed.</span>
+
+              <a href="#" class="btn-disabled">
+                <span>Not Available Yet</span>
+              </a>
+
+              <div class="actions">
+
+                <a href="#" class="not-available" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" class="not-available" target="_blank">
+                  <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab" style="width:20px; height:20px;"> Colab
+                </a>
+                <button class="prev" data-target="s2">‹</button>
+                <button class="next" data-target="s4">›</button>
+                
+              </div>
+            </div>
+          </div>
+        </label>
+
+        <label for="s4" id="slide4">
+
+          <div class="card disabled">
+
+            <div class="image">
+              <img src="static\logo placeholder.png" alt="Project4">
+              <div class="dots">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="infos">
+              <span class="name">Future Case Study</span>
+              <span class="lorem">Reserved for a future data-driven case study. Details will be added as the project is completed.</span>
+
+              <a href="#" class="btn-disabled">
+                <span>Not Available Yet</span>
+              </a>
+
+              <div class="actions">
+
+                <a href="#" class="not-available" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" class="not-available" target="_blank">
+                  <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab" style="width:20px; height:20px;"> Colab
+                </a>
+                <button class="prev" data-target="s3">‹</button>
+                <button class="next" data-target="s5">›</button>
+
+              </div>
+            </div>
+          </div>
+        </label>
+
+        <label for="s5" id="slide5">
+
+          <div class="card disabled">
+
+            <div class="image">
+              <img src="static\logo placeholder.png" alt="Project5">
+              <div class="dots">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="infos">
+              <span class="name">Future Case Study</span>
+              <span class="lorem">Reserved for a future data-driven case study. Details will be added as the project is completed.</span>
+
+              <a href="#" class="btn-disabled">
+                <span>Not Available Yet</span>
+              </a>
+
+              <div class="actions">
+
+                <a href="#" class="not-available" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" class="not-available" target="_blank">
+                  <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab" style="width:20px; height:20px;"> Colab
+                </a>
+                <button class="prev" data-target="s4">‹</button>
+                <button class="next" data-target="s1">›</button>
+                
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Sections -->
+  <section class="contact" id="contact">
+    <div class="contact-background">
+      <span></span>
+    </div>
+    <div class="contact-container">
+      
+      <div class="contact-info">
+        <div class="info-title">
+          <h2>Let’s Get In Touch</h2>
+          <p>Reach me directly through the details below:</p>
+        </div>
+
+
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="item-desc">
+            <h4>Address</h4>
+            <span>Jakarta, Indonesia</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div class="item-desc">
+            <h4>Email</h4>
+            <span>rizkypl2209@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div class="item-desc">
+            <h4>Phone</h4>
+            <span>+62 888-0987-7822</span>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/rizkyputral22" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/rizkyptr2209" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/rp.lksmana/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-element">
+          <span></span>
+        </div>
+        <form 
+          name="contact" 
+          method="POST" 
+          data-netlify="true" 
+          action="/success"
+        >
+          <input type="hidden" name="form-name" value="contact">
+
+          <label for="name">Full Name</label>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <label for="email">Email Address</label>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+
+          <label for="phone">Phone Number</label>
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+          </div>
+
+          <label for="message">Message</label>
+          <div class="input-group textarea">
+            <i class="fas fa-comment-alt"></i>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              maxlength="300" 
+              placeholder="Enter your message" 
+              required
+            ></textarea>
+            <div class="char-counter" id="char-counter">0 / 300</div>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  </section>
+
+  <footer class="footer">
+        <p>© 2025 Rizky Putra Laksmana. All rights reserved.</p>
+  </footer>
+
+  <!-- The popup modal -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    // Scroll Spy
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll(".nav-middle li");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          let id = entry.target.id;
+
+          navItems.forEach(item => {
+            item.classList.toggle("active", item.dataset.section === id);
+          });
+        }
+      });
+    }, {
+      threshold: 0.5   // adjust visibility trigger
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
+      list.forEach((item) => item.classList.remove('active'));
+      this.classList.add('active');
+    }
+    list.forEach((item) => item.addEventListener('click',activeLink));
+
+    const sidelist = document.querySelectorAll('.side-list');
+    function activeSideLink(){
+      sidelist.forEach((item) => item.classList.remove('active'));
+      this.classList.add('active');
+    }
+    sidelist.forEach((item) => item.addEventListener('click',activeSideLink));
+
+    document.querySelectorAll(".actions button").forEach(btn => {
+      btn.addEventListener("click", () => {
+      const target = btn.getAttribute("data-target");
+      const radio = document.getElementById(target);
+      if (radio) radio.checked = true;
+      });
+    });
+
+    const messageBox = document.getElementById("message");
+    const counter = document.getElementById("char-counter");
+
+    messageBox.addEventListener("input", () => {
+      counter.textContent = `${messageBox.value.length} / 300`;
+    });
+    
+    function openSidebar() {
+      document.getElementById("sidebar").style.width = "80%";
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").style.width = "0";
+      document.getElementById("overlay").style.display = "none";
+    }
+
+    function setActiveIcon(iconClass) {
+      document.getElementById("sidebarActiveIcon").innerHTML = `<i class="fas ${iconClass}"></i>`;
+    }
+
+    const skills = document.querySelectorAll(".skills");
+    const panels = document.querySelectorAll(".skill-panel");
+
+    skills.forEach(skill => {
+      skill.addEventListener("click", () => {
+        // remove active from all
+        skills.forEach(s => s.classList.remove("active"));
+        panels.forEach(p => p.classList.remove("active"));
+
+        // activate clicked
+        skill.classList.add("active");
+        const target = document.getElementById(skill.dataset.skill);
+        target.classList.add("active");
+      });
+    });
+
+    // Get modal
+    var modal = document.getElementById("imgModal");
+    var modalImg = document.getElementById("modalImage");
+    var captionText = document.getElementById("caption");
+
+    // Click image to open modal
+    document.querySelectorAll(".clickable-img").forEach(img => {
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+    });
+
+    // Close modal
+    document.querySelector(".close").onclick = function() {
+      modal.style.display = "none";
+    };
+  </script>
+</body>
+</html>
